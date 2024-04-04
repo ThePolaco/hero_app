@@ -1,6 +1,5 @@
-import { Component, Input, OnInit,  } from '@angular/core';
-import { MenuConfiguration } from '../../interfaces/navbar.interface';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Input   } from '@angular/core';
+
 
 @Component({
     selector: 'dialog',

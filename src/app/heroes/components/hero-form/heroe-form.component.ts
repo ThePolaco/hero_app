@@ -1,6 +1,5 @@
 import { Component,  EventEmitter,  Input,  OnInit, Output, } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HeroesDataService } from '../../../shared/services/heroesData.services';
 import { Hero, HeroForm } from '../../../shared/interfaces/hero.interface';
 
 @Component({

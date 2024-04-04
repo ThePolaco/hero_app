@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesDataService } from '../../../shared/services/heroesData.services';
 import { Hero, HeroForm } from '../../../shared/interfaces/hero.interface';
-import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'hero-edit-page',

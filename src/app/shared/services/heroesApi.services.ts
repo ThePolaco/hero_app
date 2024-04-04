@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, delay, map, of, tap } from 'rxjs';
+import { Observable, catchError, of,  } from 'rxjs';
 import { Hero } from '../interfaces/hero.interface';
 
 
@@ -12,6 +12,7 @@ export class HeroesApiService {
 
     getAllHeroes(): Observable<Hero[] | null> {
         return this.http.get<Hero[]>(`${this.apiUrl}/all.json`).pipe( 
+            // eslint-disable-next-line   @typescript-eslint/no-unused-vars
             catchError( error => of(null)),
             );
     }
