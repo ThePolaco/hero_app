@@ -1,0 +1,32 @@
+<div class="heroes_comp">
+    <div class="row align-items-center">
+        <div class="col-10">
+            <mat-form-field class="heroes_comp_search_input_width">
+                <mat-label>To start searching press Enter</mat-label>
+                <input matInput placeholder="Search Hero" [(ngModel)]="heroToFind" #txtInput
+                (keyup.enter)="emitValue(txtInput.value)" style="text-transform: capitalize;">
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <button mat-flat-button color="accent" (click)="addNewHero()">Add New Hero </button>
+        </div>
+    </div>
+    
+    <div class="d-flex flex-wrap">
+        <heroe-container [heroData]="heroeData" *ngFor="let heroeData of heroesShowed" (action)="actionToDo($event)"></heroe-container>
+    </div>
+    <mat-paginator #paginator
+               class="demo-paginator"
+               (page)="handlePageEvent($event)"
+               [length]="heroesData.length"
+               pageSize="10"
+               showFirstLastButtons="true"
+               hidePageSize="true"
+               [pageIndex]="pageIndex"
+               aria-label="Select page">
+    </mat-paginator>
+</div>
+    
+    
+
+

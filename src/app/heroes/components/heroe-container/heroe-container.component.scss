@@ -1,0 +1,12 @@
+.heroe_container_comp{
+    padding: 1rem;
+
+    .heroe_container_comp_border_line{
+        border-bottom: 1px solid;
+    }
+
+    ::ng-deep .mdc-tab{
+        padding-left: unset;
+        padding-right: unset;
+    }
+}

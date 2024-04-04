@@ -1,0 +1,19 @@
+.heroes_comp{
+    padding: 1rem;
+
+    .heroes_comp_search_input_width{
+        width: 100%;
+    }
+
+    ::ng-deep .mat-mdc-paginator-container{
+        justify-content: center;
+        background-color: white;
+    }
+
+    ::ng-deep .mdc-text-field--filled {
+        /*change color of label*/
+        background-color: white;
+       }
+      
+       
+}

@@ -1,0 +1,80 @@
+
+<div class="heroe_container_comp">
+  <div class="">
+    <img width="320px" height="480px" [src]="heroData.images.md"/>
+  </div>
+  <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="start"> 
+    <mat-tab label="Biography">
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Name:</span>
+        <span>{{heroData.name | uppercase}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Full Name:</span>
+        <span>{{heroData.biography.fullName}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Alter Egos:</span>
+        <span>{{heroData.biography.alterEgos}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Publisher:</span>
+        <span>{{heroData.biography.publisher}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Alignment:</span>
+        <span>{{heroData.biography.alignment}}</span>
+      </div>
+    </mat-tab> 
+    <mat-tab label="Power">
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Intelligence:</span>
+        <span>{{heroData.powerstats.intelligence}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Strength:</span>
+        <span>{{heroData.powerstats.strength}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Speed:</span>
+        <span>{{heroData.powerstats.speed}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Durability:</span>
+        <span>{{heroData.powerstats.durability}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Power:</span>
+        <span>{{heroData.powerstats.power}}</span>
+      </div>
+    </mat-tab> 
+    <mat-tab label="Apparience">
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Gender:</span>
+        <span>{{heroData.appearance.gender}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Race:</span>
+        <span>{{heroData.appearance.race}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>height:</span>
+        <span>{{heroData.appearance.height[1] ? heroData.appearance.height[1] : heroData.appearance.height[0]}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Eye Color:</span>
+        <span>{{heroData.appearance.eyeColor}}</span>
+      </div>
+      <div class="heroe_container_comp_border_line d-flex justify-content-between">
+        <span>Hair Color:</span>
+        <span>{{heroData.appearance.hairColor}}</span>
+      </div>
+    </mat-tab> 
+  </mat-tab-group> 
+  <div class="p-2 d-flex justify-content-between">
+    <button mat-stroked-button color="warn" (click)="openDialogDeleteHero()">Delete Hero</button>
+    <button mat-stroked-button color="primary" (click)="editHero()">Edit Hero</button>
+  </div>
+</div>
+
+
